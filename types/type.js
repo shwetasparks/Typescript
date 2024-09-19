@@ -32,3 +32,36 @@ var StatusCodes;
     StatusCodes["NOTFOUND"] = "not found code 404";
 })(StatusCodes || (StatusCodes = {}));
 console.log(StatusCodes.ABANDONED);
+//any: disable type checking
+let value;
+value = 2;
+value = 'shd';
+value = true;
+//unknown: type constraints
+let a;
+a = 2;
+a = 'shd';
+if (typeof a === 'string')
+    a.toUpperCase();
+//void: if function doesn't return
+function an() {
+    console.log('hello');
+}
+//if returns
+function b() {
+    return 4;
+}
+function ab() {
+    return 'shwea';
+}
+//null
+let x;
+let y;
+//undefined
+let c;
+//never: which never get run or return: not run further code
+function xk() {
+    while (true) { }
+}
+xk();
+console.log();
